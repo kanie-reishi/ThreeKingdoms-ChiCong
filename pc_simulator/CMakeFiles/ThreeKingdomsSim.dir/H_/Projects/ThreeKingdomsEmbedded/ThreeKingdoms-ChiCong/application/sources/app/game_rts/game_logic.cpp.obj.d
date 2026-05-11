@@ -1,6 +1,7 @@
 CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_logic.cpp.obj: \
  H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_logic.cpp \
  H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_logic.h \
+ H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_types.h \
  H:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  H:/msys64/ucrt64/include/stdint.h H:/msys64/ucrt64/include/crtdefs.h \
  H:/msys64/ucrt64/include/corecrt.h H:/msys64/ucrt64/include/_mingw.h \
@@ -9,4 +10,9 @@ CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-
  H:/msys64/ucrt64/include/vadefs.h \
  H:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
  H:/msys64/ucrt64/include/stddef.h \
- H:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdbool.h
+ H:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdbool.h \
+ H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_node.h \
+ H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_hero.h \
+ H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_combat.h \
+ H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_map.h \
+ H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_ai.h

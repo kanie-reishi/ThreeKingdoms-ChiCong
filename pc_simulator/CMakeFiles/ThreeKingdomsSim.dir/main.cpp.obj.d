@@ -257,4 +257,10 @@ CMakeFiles/ThreeKingdomsSim.dir/main.cpp.obj: \
  H:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdbool.h \
  H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.h \
  H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/pc_simulator/ak_mock.h \
- H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_logic.h
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_logic.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_types.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.h

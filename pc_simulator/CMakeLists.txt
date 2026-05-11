@@ -26,6 +26,21 @@ set(SOURCES
     screens/scr_map.h
     ../application/sources/app/game_rts/game_logic.cpp
     ../application/sources/app/game_rts/game_logic.h
+    ../application/sources/app/game_rts/game_types.h
+    ../application/sources/app/game_rts/game_assets.cpp
+    ../application/sources/app/game_rts/game_assets.h
+    ../application/sources/app/game_rts/game_card.cpp
+    ../application/sources/app/game_rts/game_card.h
+    ../application/sources/app/game_rts/game_node.cpp
+    ../application/sources/app/game_rts/game_node.h
+    ../application/sources/app/game_rts/game_combat.cpp
+    ../application/sources/app/game_rts/game_combat.h
+    ../application/sources/app/game_rts/game_hero.cpp
+    ../application/sources/app/game_rts/game_hero.h
+    ../application/sources/app/game_rts/game_map.cpp
+    ../application/sources/app/game_rts/game_map.h
+    ../application/sources/app/game_rts/game_ai.cpp
+    ../application/sources/app/game_rts/game_ai.h
     ../application/sources/app/game_rts/task_game.cpp
     ../application/sources/app/game_rts/task_game.h
 )

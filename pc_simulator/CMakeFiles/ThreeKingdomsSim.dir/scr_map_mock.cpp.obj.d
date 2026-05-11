@@ -2,6 +2,7 @@ CMakeFiles/ThreeKingdomsSim.dir/scr_map_mock.cpp.obj: \
  H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\scr_map_mock.cpp \
  H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\screens/scr_map.h \
  H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_logic.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_types.h \
  H:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  H:/msys64/ucrt64/include/stdint.h H:/msys64/ucrt64/include/crtdefs.h \
  H:/msys64/ucrt64/include/corecrt.h H:/msys64/ucrt64/include/_mingw.h \
@@ -11,6 +12,11 @@ CMakeFiles/ThreeKingdomsSim.dir/scr_map_mock.cpp.obj: \
  H:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
  H:/msys64/ucrt64/include/stddef.h \
  H:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdbool.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.h \
  H:/msys64/ucrt64/include/SDL2/SDL.h \
  H:/msys64/ucrt64/include/SDL2/SDL_main.h \
  H:/msys64/ucrt64/include/SDL2/SDL_stdinc.h \
@@ -256,4 +262,6 @@ CMakeFiles/ThreeKingdomsSim.dir/scr_map_mock.cpp.obj: \
  H:/msys64/ucrt64/include/SDL2/SDL_timer.h \
  H:/msys64/ucrt64/include/SDL2/SDL_version.h \
  H:/msys64/ucrt64/include/SDL2/SDL_locale.h \
- H:/msys64/ucrt64/include/SDL2/SDL_misc.h
+ H:/msys64/ucrt64/include/SDL2/SDL_misc.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.h \
+ H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.h

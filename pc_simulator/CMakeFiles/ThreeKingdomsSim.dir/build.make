@@ -116,11 +116,116 @@ CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_logic.cpp.s"
 	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_logic.cpp -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_logic.cpp.s
 
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/flags.make
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.obj: H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.obj"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.obj -MF CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_assets.cpp.obj.d -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_assets.cpp.obj -c H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_assets.cpp
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.i"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_assets.cpp > CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_assets.cpp.i
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.s"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_assets.cpp -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_assets.cpp.s
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/flags.make
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.obj: H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.obj"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.obj -MF CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_card.cpp.obj.d -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_card.cpp.obj -c H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_card.cpp
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.i"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_card.cpp > CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_card.cpp.i
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.s"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_card.cpp -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_card.cpp.s
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/flags.make
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.obj: H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.obj"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.obj -MF CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_node.cpp.obj.d -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_node.cpp.obj -c H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_node.cpp
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.i"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_node.cpp > CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_node.cpp.i
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.s"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_node.cpp -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_node.cpp.s
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/flags.make
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.obj: H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.obj"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.obj -MF CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_combat.cpp.obj.d -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_combat.cpp.obj -c H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_combat.cpp
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.i"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_combat.cpp > CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_combat.cpp.i
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.s"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_combat.cpp -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_combat.cpp.s
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/flags.make
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.obj: H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.obj"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.obj -MF CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_hero.cpp.obj.d -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_hero.cpp.obj -c H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_hero.cpp
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.i"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_hero.cpp > CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_hero.cpp.i
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.s"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_hero.cpp -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_hero.cpp.s
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/flags.make
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.obj: H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.obj"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.obj -MF CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_map.cpp.obj.d -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_map.cpp.obj -c H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_map.cpp
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.i"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_map.cpp > CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_map.cpp.i
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.s"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_map.cpp -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_map.cpp.s
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/flags.make
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.obj: H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.obj"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.obj -MF CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_ai.cpp.obj.d -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_ai.cpp.obj -c H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_ai.cpp
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.i"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_ai.cpp > CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_ai.cpp.i
+
+CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.s"
+	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_ai.cpp -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\game_ai.cpp.s
+
 CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/flags.make
 CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp
 CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj: H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp
 CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj: CMakeFiles/ThreeKingdomsSim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj"
 	H:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj -MF CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\task_game.cpp.obj.d -o CMakeFiles\ThreeKingdomsSim.dir\H_\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\task_game.cpp.obj -c H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\application\sources\app\game_rts\task_game.cpp
 
 CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.i: cmake_force
@@ -136,6 +241,13 @@ ThreeKingdomsSim_OBJECTS = \
 "CMakeFiles/ThreeKingdomsSim.dir/main.cpp.obj" \
 "CMakeFiles/ThreeKingdomsSim.dir/scr_map_mock.cpp.obj" \
 "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_logic.cpp.obj" \
+"CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.obj" \
+"CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.obj" \
+"CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.obj" \
+"CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.obj" \
+"CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.obj" \
+"CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.obj" \
+"CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.obj" \
 "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj"
 
 # External object files for target ThreeKingdomsSim
@@ -144,6 +256,13 @@ ThreeKingdomsSim_EXTERNAL_OBJECTS =
 ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/main.cpp.obj
 ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/scr_map_mock.cpp.obj
 ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_logic.cpp.obj
+ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.obj
+ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.obj
+ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.obj
+ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.obj
+ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.obj
+ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.obj
+ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.obj
 ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj
 ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/build.make
 ThreeKingdomsSim.exe: H:/msys64/ucrt64/lib/libSDL2main.a
@@ -151,7 +270,7 @@ ThreeKingdomsSim.exe: H:/msys64/ucrt64/lib/libSDL2.dll.a
 ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/linkLibs.rsp
 ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/objects1.rsp
 ThreeKingdomsSim.exe: CMakeFiles/ThreeKingdomsSim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ThreeKingdomsSim.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=H:\Projects\ThreeKingdomsEmbedded\ThreeKingdoms-ChiCong\pc_simulator\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ThreeKingdomsSim.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ThreeKingdomsSim.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
