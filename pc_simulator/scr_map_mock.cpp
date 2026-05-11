@@ -2,22 +2,35 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
 
+#include "game_assets.h"
+#include "game_card.h"
+
 // Extern renderer từ main.cpp
 extern SDL_Renderer* g_renderer;
 
-// Font 3x5 đơn giản để vẽ số (0-9)
-const uint8_t font3x5[10][5] = {
-    {0b111, 0b101, 0b101, 0b101, 0b111}, // 0
-    {0b010, 0b110, 0b010, 0b010, 0b111}, // 1
-    {0b111, 0b001, 0b111, 0b100, 0b111}, // 2
-    {0b111, 0b001, 0b111, 0b001, 0b111}, // 3
-    {0b101, 0b101, 0b111, 0b001, 0b001}, // 4
-    {0b111, 0b100, 0b111, 0b001, 0b111}, // 5
-    {0b111, 0b100, 0b111, 0b101, 0b111}, // 6
-    {0b111, 0b001, 0b010, 0b010, 0b010}, // 7
-    {0b111, 0b101, 0b111, 0b101, 0b111}, // 8
-    {0b111, 0b101, 0b111, 0b001, 0b111}  // 9
-};
+// Hàm vẽ Sprite 8-bit
+void draw_bitmap(SDL_Renderer* r, int x, int y, const uint8_t* bitmap, int w, int h, int size) {
+    for (int row = 0; row < h; row++) {
+        for (int col = 0; col < w; col++) {
+            if (bitmap[row] & (1 << (w - 1 - col))) {
+                SDL_Rect px = { x + col * size, y + row * size, size, size };
+                SDL_RenderFillRect(r, &px);
+            }
+        }
+    }
+}
+
+// Hàm vẽ Sprite 16-bit
+void draw_bitmap16(SDL_Renderer* r, int x, int y, const uint16_t* bitmap, int w, int h, int size) {
+    for (int row = 0; row < h; row++) {
+        for (int col = 0; col < w; col++) {
+            if (bitmap[row] & (1 << (w - 1 - col))) {
+                SDL_Rect px = { x + col * size, y + row * size, size, size };
+                SDL_RenderFillRect(r, &px);
+            }
+        }
+    }
+}
 
 // Hàm vẽ 1 chữ số
 void draw_digit(SDL_Renderer* r, int x, int y, int digit, int size) {
@@ -45,12 +58,59 @@ void draw_number(SDL_Renderer* r, int x, int y, int number) {
     }
 }
 
-void scr_map_render(GameState_t* gs) {
+// Hàm vẽ 1 ký tự A-Z
+void draw_char(SDL_Renderer* r, int x, int y, char c, int size) {
+    if (c >= 'a' && c <= 'z') c -= 32; // To uppercase
+    if (c < 'A' || c > 'Z') return;
+    int idx = c - 'A';
+    for (int row = 0; row < 5; row++) {
+        for (int col = 0; col < 3; col++) {
+            if (font3x5_alpha[idx][row] & (1 << (2 - col))) {
+                SDL_Rect px = { x + col * size, y + row * size, size, size };
+                SDL_RenderFillRect(r, &px);
+            }
+        }
+    }
+}
+
+// Hàm vẽ chuỗi ký tự (hỗ trợ A-Z và khoảng trắng)
+void draw_string(SDL_Renderer* r, int x, int y, const char* str) {
+    int size = 2;
+    int spacing = 3 * size + 2;
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] != ' ') {
+            draw_char(r, x + i * spacing, y, str[i], size);
+        }
+    }
+}
+
+void scr_map_render(GameState_t* gs, uint8_t game_state) {
     if (!g_renderer) return;
 
     // Xóa nền đen
     SDL_SetRenderDrawColor(g_renderer, 0, 0, 0, 255);
     SDL_RenderClear(g_renderer);
+
+    if (game_state == 0) { // STATE_MAIN_MENU
+        SDL_SetRenderDrawColor(g_renderer, 255, 255, 255, 255);
+        draw_number(g_renderer, 150, 100, 1);
+        draw_string(g_renderer, 170, 100, "FIXED MAP");
+        
+        draw_number(g_renderer, 150, 150, 2);
+        draw_string(g_renderer, 170, 150, "RANDOM MAP");
+        
+        SDL_SetRenderDrawColor(g_renderer, 0, 255, 0, 255);
+        if (gs->cursor == 0) {
+            SDL_Rect cursor_rect = { 130, 98, 10, 10 };
+            SDL_RenderFillRect(g_renderer, &cursor_rect);
+        } else {
+            SDL_Rect cursor_rect = { 130, 148, 10, 10 };
+            SDL_RenderFillRect(g_renderer, &cursor_rect);
+        }
+        
+        SDL_RenderPresent(g_renderer);
+        return;
+    }
 
     // Tỷ lệ scale: Vẽ đồ họa trên hệ tọa độ 128x64, nhưng phóng to x4 trên PC
     int scale = 4;
@@ -75,9 +135,11 @@ void scr_map_render(GameState_t* gs) {
     for (uint8_t i = 0; i < MAX_NODES; i++) {
         Node_t* n = &gs->nodes[i];
         
-        // Vẽ viền lớn hơn để làm nổi bật Node đang chọn
-        SDL_Rect rect = { n->x * scale - 12, n->y * scale - 12, 24, 24 };
-
+        // Tọa độ trung tâm để vẽ
+        int cx = n->x * scale - 12; // Do sprite 8x8 * scale 3 = 24. Để căn giữa 24 ta dùng 12
+        int cy = n->y * scale - 12;
+        int sprite_scale = 3; // Vẽ sprite to gấp 3 lần pixel gốc
+        
         // Màu sắc dựa trên phe sở hữu
         if (n->owner == OWNER_PLAYER) {
             SDL_SetRenderDrawColor(g_renderer, 0, 200, 0, 255); // Xanh lá - Player
@@ -87,20 +149,30 @@ void scr_map_render(GameState_t* gs) {
             SDL_SetRenderDrawColor(g_renderer, 150, 150, 150, 255); // Xám - Trung lập
         }
 
-        SDL_RenderFillRect(g_renderer, &rect);
+        // Vẽ Sprite thay vì hình vuông cục mịch
+        if (n->level == 3) {
+            draw_bitmap(g_renderer, cx, cy, sprite_castle_lv3, 8, 8, sprite_scale);
+        } else if (n->level == 2) {
+            draw_bitmap(g_renderer, cx, cy, sprite_castle_lv2, 8, 8, sprite_scale);
+        } else {
+            draw_bitmap(g_renderer, cx, cy, sprite_castle_lv1, 8, 8, sprite_scale);
+        }
 
         // Highlight con trỏ (Yellow)
         if (i == gs->cursor) {
             SDL_SetRenderDrawColor(g_renderer, 255, 255, 0, 255);
-            SDL_Rect outline = { rect.x - 2, rect.y - 2, rect.w + 4, rect.h + 4 };
-            SDL_RenderDrawRect(g_renderer, &outline);
+            // Vẽ Cursor 12x12
+            draw_bitmap16(g_renderer, cx - 6, cy - 6, sprite_cursor, 12, 12, sprite_scale);
         }
         
-        // Highlight thành đang được chọn làm nguồn xuất quân (Cyan)
+        // Highlight thành đang được chọn làm nguồn xuất quân (Cyan/Magenta)
         if (i == gs->selected_src) {
-            SDL_SetRenderDrawColor(g_renderer, 0, 255, 255, 255);
-            SDL_Rect outline = { rect.x - 4, rect.y - 4, rect.w + 8, rect.h + 8 };
-            SDL_RenderDrawRect(g_renderer, &outline);
+            if (gs->hero_selected) {
+                SDL_SetRenderDrawColor(g_renderer, 255, 0, 255, 255); // Magenta
+            } else {
+                SDL_SetRenderDrawColor(g_renderer, 0, 255, 255, 255); // Cyan
+            }
+            draw_bitmap16(g_renderer, cx - 6, cy - 6, sprite_cursor, 12, 12, sprite_scale);
         }
 
         // Vẽ số lượng quân của Node (trắng)
@@ -115,6 +187,12 @@ void scr_map_render(GameState_t* gs) {
         for (int l = 0; l < n->level; l++) {
             SDL_Rect star = { start_x + l * 6, n->y * scale + 5, 4, 4 };
             SDL_RenderFillRect(g_renderer, &star);
+        }
+        
+        // Vẽ Hero nếu có (Thanh kiếm ở góc phải)
+        if (n->has_hero) {
+            SDL_SetRenderDrawColor(g_renderer, 0, 150, 255, 255); // Màu xanh dương
+            draw_bitmap(g_renderer, cx + 18, cy - 6, sprite_hero, 5, 5, 2);
         }
     }
 
@@ -143,6 +221,12 @@ void scr_map_render(GameState_t* gs) {
                 }
                 SDL_Rect mrect = { mx * scale - 4, my * scale - 4, 8, 8 };
                 SDL_RenderFillRect(g_renderer, &mrect);
+                
+                // Vẽ thêm màu chấm hero bên trong nếu đạo quân có hero
+                if (gs->marches[i].is_hero_march) {
+                    SDL_SetRenderDrawColor(g_renderer, 0, 150, 255, 255);
+                    draw_bitmap(g_renderer, mx * scale - 4, my * scale - 4, sprite_hero, 5, 5, 2);
+                }
             }
         }
     }
@@ -167,6 +251,76 @@ void scr_map_render(GameState_t* gs) {
     SDL_Rect slash2 = { 512 - 25, 10, 4, 2 };
     SDL_RenderFillRect(g_renderer, &slash2);
     draw_number(g_renderer, 512 - 17, 5, 4);
+
+    // Vẽ Năm (Year) ở giữa trên cùng
+    SDL_SetRenderDrawColor(g_renderer, 255, 215, 0, 255); // Gold
+    draw_string(g_renderer, 200, 5, "YEAR");
+    draw_number(g_renderer, 240, 5, gs->year);
+
+    // Vẽ Overlay Nội Chính (Không che hoàn toàn map)
+    if (game_state == STATE_INTERNAL_AFFAIRS || game_state == STATE_CARD_TARGET) {
+        SDL_SetRenderDrawBlendMode(g_renderer, SDL_BLENDMODE_BLEND);
+        SDL_SetRenderDrawColor(g_renderer, 0, 0, 0, 200);
+        SDL_Rect bg = { 50, 155, 412, 115 };
+        SDL_RenderFillRect(g_renderer, &bg);
+        SDL_SetRenderDrawColor(g_renderer, 255, 215, 0, 255); // Viền vàng
+        SDL_RenderDrawRect(g_renderer, &bg);
+        SDL_SetRenderDrawBlendMode(g_renderer, SDL_BLENDMODE_NONE);
+
+        if (game_state == STATE_INTERNAL_AFFAIRS) {
+            // -- Giao diện chọn thẻ bài --
+            SDL_SetRenderDrawColor(g_renderer, 255, 215, 0, 255);
+            draw_string(g_renderer, 170, 162, "INTERNAL AFFAIRS");
+
+            for (int i = 0; i < 3; i++) {
+                int cy = 186 + i * 24;
+                uint8_t ct = gs->cards_offered[i];
+                const char* scope_str = (card_get_scope(ct) == SCOPE_NODE) ? "NODE" : "GLOBAL";
+
+                if (i == gs->card_cursor) {
+                    // Hàng đang chọn: nền vàng nhạt
+                    SDL_SetRenderDrawBlendMode(g_renderer, SDL_BLENDMODE_BLEND);
+                    SDL_SetRenderDrawColor(g_renderer, 255, 215, 0, 50);
+                    SDL_Rect hl = { 60, cy - 2, 392, 18 };
+                    SDL_RenderFillRect(g_renderer, &hl);
+                    SDL_SetRenderDrawBlendMode(g_renderer, SDL_BLENDMODE_NONE);
+                    SDL_SetRenderDrawColor(g_renderer, 0, 255, 0, 255);
+                    draw_string(g_renderer, 68, cy, ">");
+                } else {
+                    SDL_SetRenderDrawColor(g_renderer, 180, 180, 180, 255);
+                }
+                draw_string(g_renderer, 88, cy, card_get_name(ct));
+
+                // Hiển thị phạm vi (NODE/GLOBAL)
+                SDL_SetRenderDrawColor(g_renderer, 100, 180, 255, 255);
+                draw_string(g_renderer, 310, cy, scope_str);
+            }
+        } else {
+            // -- Giao diện chọn node mục tiêu (STATE_CARD_TARGET) --
+            SDL_SetRenderDrawColor(g_renderer, 255, 215, 0, 255);
+            draw_string(g_renderer, 160, 162, "CHON THANH MUC TIEU");
+
+            SDL_SetRenderDrawColor(g_renderer, 200, 200, 200, 255);
+            draw_string(g_renderer, 100, 190, card_get_name(gs->pending_card));
+            draw_string(g_renderer, 280, 190, "-> OK DE AP DUNG");
+
+            // Highlight các node hợp lệ (của Player) trên map
+            for (uint8_t i = 0; i < MAX_NODES; i++) {
+                if (gs->nodes[i].owner == OWNER_PLAYER) {
+                    int cx = gs->nodes[i].x * scale - 12;
+                    int cy = gs->nodes[i].y * scale - 12;
+                    if (i == gs->cursor) {
+                        // Node đang chọn: Cursor vàng nhấp nháy
+                        SDL_SetRenderDrawColor(g_renderer, 255, 255, 0, 255);
+                    } else {
+                        // Node hợp lệ khác: viền xanh lá nhạt
+                        SDL_SetRenderDrawColor(g_renderer, 0, 180, 0, 255);
+                    }
+                    draw_bitmap16(g_renderer, cx - 6, cy - 6, sprite_cursor, 12, 12, 3);
+                }
+            }
+        }
+    }
 
     // Đẩy hình ảnh ra màn hình SDL
     SDL_RenderPresent(g_renderer);

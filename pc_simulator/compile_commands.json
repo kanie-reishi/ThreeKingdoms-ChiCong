@@ -19,6 +19,48 @@
 },
 {
   "directory": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/pc_simulator",
+  "command": "H:\\msys64\\ucrt64\\bin\\c++.exe -DPC_SIMULATOR @CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\ThreeKingdomsSim.dir\\H_\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_assets.cpp.obj -c H:\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_assets.cpp",
+  "file": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp",
+  "output": "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_assets.cpp.obj"
+},
+{
+  "directory": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/pc_simulator",
+  "command": "H:\\msys64\\ucrt64\\bin\\c++.exe -DPC_SIMULATOR @CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\ThreeKingdomsSim.dir\\H_\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_card.cpp.obj -c H:\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_card.cpp",
+  "file": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp",
+  "output": "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_card.cpp.obj"
+},
+{
+  "directory": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/pc_simulator",
+  "command": "H:\\msys64\\ucrt64\\bin\\c++.exe -DPC_SIMULATOR @CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\ThreeKingdomsSim.dir\\H_\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_node.cpp.obj -c H:\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_node.cpp",
+  "file": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp",
+  "output": "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_node.cpp.obj"
+},
+{
+  "directory": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/pc_simulator",
+  "command": "H:\\msys64\\ucrt64\\bin\\c++.exe -DPC_SIMULATOR @CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\ThreeKingdomsSim.dir\\H_\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_combat.cpp.obj -c H:\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_combat.cpp",
+  "file": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp",
+  "output": "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_combat.cpp.obj"
+},
+{
+  "directory": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/pc_simulator",
+  "command": "H:\\msys64\\ucrt64\\bin\\c++.exe -DPC_SIMULATOR @CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\ThreeKingdomsSim.dir\\H_\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_hero.cpp.obj -c H:\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_hero.cpp",
+  "file": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp",
+  "output": "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_hero.cpp.obj"
+},
+{
+  "directory": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/pc_simulator",
+  "command": "H:\\msys64\\ucrt64\\bin\\c++.exe -DPC_SIMULATOR @CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\ThreeKingdomsSim.dir\\H_\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_map.cpp.obj -c H:\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_map.cpp",
+  "file": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp",
+  "output": "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_map.cpp.obj"
+},
+{
+  "directory": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/pc_simulator",
+  "command": "H:\\msys64\\ucrt64\\bin\\c++.exe -DPC_SIMULATOR @CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\ThreeKingdomsSim.dir\\H_\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_ai.cpp.obj -c H:\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\game_ai.cpp",
+  "file": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp",
+  "output": "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/game_ai.cpp.obj"
+},
+{
+  "directory": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/pc_simulator",
   "command": "H:\\msys64\\ucrt64\\bin\\c++.exe -DPC_SIMULATOR @CMakeFiles/ThreeKingdomsSim.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\ThreeKingdomsSim.dir\\H_\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\task_game.cpp.obj -c H:\\Projects\\ThreeKingdomsEmbedded\\ThreeKingdoms-ChiCong\\application\\sources\\app\\game_rts\\task_game.cpp",
   "file": "H:/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp",
   "output": "CMakeFiles/ThreeKingdomsSim.dir/H_/Projects/ThreeKingdomsEmbedded/ThreeKingdoms-ChiCong/application/sources/app/game_rts/task_game.cpp.obj"

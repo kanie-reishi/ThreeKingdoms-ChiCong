@@ -4,6 +4,6 @@
 #include "game_logic.h"
 
 // Hàm render map sẽ được gọi từ task_game
-void scr_map_render(GameState_t* gs);
+void scr_map_render(GameState_t* gs, uint8_t game_state);
 
 #endif // SCR_MAP_H
