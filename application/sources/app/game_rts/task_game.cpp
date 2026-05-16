@@ -70,7 +70,7 @@ static void handle_global_tick() {
     }
 
     // Kiểm tra Hero lưu vong
-    hero_tick_homeless(&gs);
+    hero_tick(&gs);
     // AI đưa ra quyết định nếu chưa đạt giới hạn 4 đạo quân
     int ai_slot = get_free_march_slot(&gs, OWNER_AI);
     if (ai_slot != -1) {

@@ -33,6 +33,16 @@ typedef enum {
 } GameStateEnum_t;
 
 /**
+ * @brief Các trạng thái vòng đời của một Hero
+ */
+typedef enum {
+    HERO_ALIVE = 0,    // Hero đang sống bình thường trong thành hoặc trên đường hành quân
+    HERO_EXILED,       // Vừa mất thành, đang chờ đếm ngược
+    HERO_RESPAWNING,   // Đang tìm thành phù hợp để hạ cánh xuống
+    HERO_DEAD_END      // Thua game, không còn thành nào phe mình để hồi sinh
+} HeroState;
+
+/**
  * @brief Cấu trúc lưu trữ các buff TOÀN CỤC của người chơi (từ thẻ GLOBAL)
  */
 typedef struct {
@@ -40,7 +50,29 @@ typedef struct {
     uint8_t march_speed;   // Bonus tốc độ hành quân (%) toàn bộ đạo quân
 } PlayerBuffs_t;
 
+/**
+ * @brief Định danh các Tướng trong game
+ */
+#define NO_HERO 0xFF
+
+typedef enum {
+    HERO_TRUONG_PHI = 0,
+    HERO_GIA_CAT_LUONG,
+    HERO_HUA_CHU,
+    MAX_HERO_UNITS
+} HeroId_t;
+
+/**
+ * @brief Cấu trúc lưu trữ trạng thái của từng Tướng
+ */
+typedef struct {
+    HeroState state;
+    uint8_t respawn_timer; // Bộ đếm ngược thời gian hồi sinh
+    uint8_t owner;         // Tướng này đang theo phe nào (Owner_t)
+} HeroInfo_t;
+
 /* ── Structs ── */
+#define HERO_RESPAWN_DELAY_TICKS 50 // Thời gian chờ hồi sinh của Hero (5 giây)
 #define MAX_NODES 6      // Số lượng tối đa các thành trì trên bản đồ
 #define NO_NODE   0xFF   // Giá trị biểu diễn không có thành trì nào được chọn
 
@@ -54,7 +86,7 @@ typedef struct {
     uint8_t x, y;              // Tọa độ trên màn hình để render
     uint8_t troops;            // Số lượng quân lính hiện tại
     uint8_t level;             // Cấp độ của thành trì (1, 2, 3...)
-    bool    has_hero;          // Thành trì có Hero hay không
+    uint8_t hero_present;      // ID của Tướng đang có mặt ở thành (hoặc NO_HERO)
     uint8_t owner;             // Phe sở hữu (Owner_t)
     uint8_t node_spawn_bonus;  // Buff Đồn Điền: +X quân/tick riêng cho node này
     uint8_t node_defense_bonus;// Buff Tu Thành: +X điểm giáp riêng cho node này
@@ -67,7 +99,7 @@ typedef struct {
     uint8_t src, dst;    // Node nguồn và Node đích
     uint8_t troops;      // Số lượng quân lính tham gia hành quân
     uint8_t progress;    // Tiến trình di chuyển (0 - 100%)
-    bool    is_hero_march; // Đạo quân này có chứa Hero hay không
+    uint8_t hero_id;     // ID của Tướng đang dẫn quân (hoặc NO_HERO)
     uint8_t owner;       // Phe sở hữu đội quân (Owner_t)
 } March_t;
 
@@ -91,7 +123,7 @@ typedef struct {
     uint8_t cards_offered[3];   // 3 thẻ bài đang được hiển thị để chọn
     uint8_t card_cursor;        // Vị trí con trỏ thẻ bài (0-2)
     uint8_t pending_card;       // Thẻ bài đang chờ chọn node mục tiêu
-    bool    hero_homeless;      // Hero đang "lưu vong" (mất thành, chờ tái sinh)
+    HeroInfo_t heroes[MAX_HERO_UNITS]; // Thông tin trạng thái của các Tướng trong game
     uint8_t dirty;              // Cờ đánh dấu cần render lại màn hình
 } GameState_t;
 

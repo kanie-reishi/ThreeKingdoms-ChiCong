@@ -53,7 +53,10 @@ void game_map_init_fixed(GameState_t* gs) {
     gs->year           = 184;
     gs->buffs.hero_bonus   = 1;  // Hệ số nhân mặc định = 1 (chưa tăng)
     gs->buffs.march_speed  = 0;  // Không có bonus tốc độ bổ sung
-    gs->hero_homeless      = false;
+    gs->heroes[OWNER_PLAYER].state = HERO_ALIVE;
+    gs->heroes[OWNER_PLAYER].respawn_timer = 0;
+    gs->heroes[OWNER_AI].state = HERO_ALIVE;
+    gs->heroes[OWNER_AI].respawn_timer = 0;
     gs->pending_card       = 0xFF;
     // Reset bộ đếm buff riêng của từng node về 0
     for (uint8_t i = 0; i < MAX_NODES; i++) {
@@ -132,32 +135,49 @@ void game_map_init_procedural(GameState_t* gs, uint16_t seed) {
 
     // Bước 3: Áp dụng thuật toán Minimum Spanning Tree (Prim) để kết nối các Node
     //         Điều này đảm bảo bản đồ LUÔN liên thông (mọi Node đều có thể đi tới nhau).
-    bool in_mst[MAX_NODES] = {false};
-    in_mst[0] = true; // Bắt đầu từ Node 0
+    // Bước 3: Áp dụng thuật toán Minimum Spanning Tree (Prim) để kết nối các Node
+    //         Điều này đảm bảo bản đồ LUÔN liên thông (mọi Node đều có thể đi tới nhau).
+    uint32_t visited_mask = 1; // Node 0 is in MST (Bit 0 = 1)
+    uint32_t min_dist_to_mst[MAX_NODES];
+    uint8_t closest_mst_node[MAX_NODES];
+    
+    // Khởi tạo khoảng cách từ Node 0 tới tất cả các Node khác
+    for (uint8_t i = 1; i < MAX_NODES; i++) {
+        min_dist_to_mst[i] = get_dist_sq(gs->nodes[0].x, gs->nodes[0].y, gs->nodes[i].x, gs->nodes[i].y);
+        closest_mst_node[i] = 0;
+    }
     
     for (uint8_t edges = 0; edges < MAX_NODES - 1; edges++) {
-        uint8_t best_u = 0, best_v = 0;
+        uint8_t best_v = 0;
         uint32_t min_dist = 0xFFFFFFFF;
         
-        // Tìm cạnh ngắn nhất nối từ một đỉnh ĐÃ có trong MST đến một đỉnh CHƯA có trong MST
-        for (uint8_t u = 0; u < MAX_NODES; u++) {
-            if (in_mst[u]) {
-                for (uint8_t v = 0; v < MAX_NODES; v++) {
-                    if (!in_mst[v]) {
-                        uint32_t dist = get_dist_sq(gs->nodes[u].x, gs->nodes[u].y, gs->nodes[v].x, gs->nodes[v].y);
-                        if (dist < min_dist) {
-                            min_dist = dist;
-                            best_u = u;
-                            best_v = v;
-                        }
-                    }
+        // Tìm đỉnh CHƯA có trong MST gần MST nhất (Duyệt mảng 1D thay vì 2D)
+        for (uint8_t v = 1; v < MAX_NODES; v++) {
+            if (!(visited_mask & (1 << v))) {
+                if (min_dist_to_mst[v] < min_dist) {
+                    min_dist = min_dist_to_mst[v];
+                    best_v = v;
                 }
             }
         }
+        
+        uint8_t best_u = closest_mst_node[best_v];
+        
         // Thêm cạnh ngắn nhất vừa tìm được vào đồ thị (kết nối u và v 2 chiều)
         gs->adj[best_u] |= (1 << best_v);
         gs->adj[best_v] |= (1 << best_u);
-        in_mst[best_v] = true; // Đưa v vào MST
+        visited_mask |= (1 << best_v); // Đưa v vào MST bằng toán tử bitwise OR
+        
+        // Cập nhật lại mảng khoảng cách cho các node chưa vào MST
+        for (uint8_t v = 1; v < MAX_NODES; v++) {
+            if (!(visited_mask & (1 << v))) {
+                uint32_t dist = get_dist_sq(gs->nodes[best_v].x, gs->nodes[best_v].y, gs->nodes[v].x, gs->nodes[v].y);
+                if (dist < min_dist_to_mst[v]) {
+                    min_dist_to_mst[v] = dist;
+                    closest_mst_node[v] = best_v;
+                }
+            }
+        }
     }
     
     // Bước 4: Thêm 2 cạnh ngẫu nhiên để tạo các vòng lặp (Cycles)
@@ -200,7 +220,10 @@ void game_map_init_procedural(GameState_t* gs, uint16_t seed) {
     gs->year           = 184;
     gs->buffs.hero_bonus   = 1;
     gs->buffs.march_speed  = 0;
-    gs->hero_homeless      = false;
+    gs->heroes[OWNER_PLAYER].state = HERO_ALIVE;
+    gs->heroes[OWNER_PLAYER].respawn_timer = 0;
+    gs->heroes[OWNER_AI].state = HERO_ALIVE;
+    gs->heroes[OWNER_AI].respawn_timer = 0;
     gs->pending_card       = 0xFF;
     for (uint8_t i = 0; i < MAX_NODES; i++) {
         gs->nodes[i].node_spawn_bonus   = 0;
